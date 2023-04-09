@@ -1,0 +1,215 @@
+:root {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Nav Bar */
+
+.lnd {
+    font-size: clamp(1.5rem, 10vw, 2.2rem);
+}
+
+
+/* Top Menu */
+
+#menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Design', serif;
+}
+
+
+#menu-items {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    z-index: 2;
+    display: relative;
+}
+
+#menu-items:hover>.menu-item {
+    opacity: 0.3;
+
+}
+
+#menu-items:hover~#menu-background-pattern {
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+}
+
+#menu-items:hover>.menu-item:hover {
+    opacity: 1;
+    font-size: clamp(3.4rem, 8.4vw, 8.4rem);
+}
+
+.menu-item {
+    color: #fff;
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-family: 'Quicksand', 'Times New Roman', Times, sans-serif;
+
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    transition: opacity 800ms ease,
+        font-size 400ms ease;
+
+}
+
+/* #menu-background-pattern {
+    height: 110vh;
+    width: 110vw;
+
+    background-color: #6c9a9491;
+
+    background-image: radial-gradient(rgba(24, 63, 71, 0.1) 9%,
+            transparent 9%);
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+} */
+
+
+/* #menu-background-image {
+    height: 100%;
+    width: 100%;
+
+    background-image: linear-gradient(to right, #b6a687, #577171);
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+
+    background-position: center 40%;
+    background-size: 110vmax;
+    opacity: 0.50;
+
+    transition: opacity 800ms ease,
+        background-size 800ms ease,
+        background-position 800ms ease;
+
+    animation: infinite;
+} */
+
+#menu-items:hover~#menu-background-image {
+    background-size: 100vmax;
+    background-image: linear-gradient(to right, #577171, #b6a687);
+    opacity: 0.30;
+}
+
+#menu>#menu-background-pattern {
+    background-position: 0% calc(-25% * (var(--active-index, 0) + 1));
+}
+
+#menu>#menu-background-image {
+    background-position: center calc(45% + 5% * var(--active-index, 0));
+}
+
+/* Profile Section */
+
+
+.profile {
+    text-align: center;
+    font-size: clamp(1.5rem, 10vw, 1.75rem);
+
+}
+
+.name {
+    font-family: 'Satisfy', cursive;
+    font-size: clamp(2rem, 10vw, 4rem);
+
+}
+
+/* Exeperience Section */
+
+.experience {
+    padding: 7%;
+    text-align: center;
+}
+
+.reman, .esti {
+    position: relative;
+}
+
+.reman:hover {
+    cursor: pointer;
+}
+
+#reman-des, #esti-des {
+    color: #000000;
+
+}
+
+/* Contact */
+
+.message-box {
+    width: 100%;
+    padding: 0 0 5%;
+}
+
+.container {
+    margin-top: 10%;
+}
+
+.btn {
+    margin-top: 5%;
+}
+
+/* Gallery */
+
+.gallery-grid {
+    padding: 7%;
+}
+
+.gallery-heading {
+    text-align: center;
+}
+
+
+
+/* HTML Elements */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #f1f0f0;
+    font-size: clamp(1.5rem, 10vw, 1.75rem);
+    background: linear-gradient(-45deg, #2fdce5, #571f2d, #645024, #0de3b1);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Footer */
+
+footer {
+    background-color: #2f3434;
+    text-align: center;
+    padding: 3% 15% 7%;
+}
+
+/* Responsive */
+
+/* .container-fluid, .col-lg-6 {
+    margin-top: 15%;
+} */
